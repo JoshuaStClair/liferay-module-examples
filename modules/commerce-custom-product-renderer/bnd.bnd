@@ -1,0 +1,4 @@
+Bundle-Name: Commerce Custom Product Renderer
+Bundle-SymbolicName: com.liferay.commerce.custom.product.renderer
+Bundle-Version: 1.0.0
+Web-ContextPath: /commerce-custom-product-renderer
