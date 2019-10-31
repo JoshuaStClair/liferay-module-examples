@@ -1,0 +1,43 @@
+# IntelliJ IDEA project descriptors and artifacts
+.idea/*
+*.iml
+
+# Eclipse descriptors and artifacts
+.classpath
+.JETEmitters
+.project
+/.metadata/
+/.recommenders/
+/RemoteSystemsTempFiles/
+
+# Personal hidden scripts
+.*.sh
+
+# Mac OSX Finder metadata file
+.DS_Store
+
+/app
+/bin/
+
+# Liferay Workspace excludes
+.gradle/*
+
+init.gradle
+init-*.gradle
+
+/dxpcloud-local-stack/
+bundles/*
+**/build/*
+**/out/*
+**/target/*
+
+# Modules excludes
+/modules/**/bin/
+/modules/**/build/
+/modules/**/.sass-cache/
+
+# Build-settings overrides
+gradle-local.properties
+
+# The directories written by 'dxpcloud-upgrade' for suggested merges to be done by users manually
+/*.latest-from-upgrade/
