@@ -1,0 +1,79 @@
+{namespace DDMTable}
+
+/**
+ * Defines the delegated template for the form field.
+ */
+{deltemplate ddm.field variant="'table'"}
+	{call .render data="all" /}
+{/deltemplate}
+
+/**
+ * Prints the form field.
+ */
+{template .render}
+	{@param name: string}
+	{@param pathThemeImages: string}
+	{@param? options: list<[cpDefinitionId: string, cpInstanceId: string, label: string, maxQuantity: string, price: string, quantity: string, value: ?]>}
+	{@param? dir: string}
+	{@param? label: string}
+	{@param? readOnly: bool}
+	{@param? required: bool}
+
+	<div class="form-group" data-fieldname="{$name}">
+		<table class="table table-autofit table-list table-striped">
+			<thead>
+				<tr>
+					<th>
+						{$label}
+					</th>
+					<th>
+						{msg desc=""}price{/msg}
+					</th>
+					<th>
+						{msg desc=""}available-quantity{/msg}
+					</th>
+					<th>
+						{msg desc=""}quantity{/msg}{sp}
+						{if $required}
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="{$pathThemeImages}/lexicon/icons.svg#asterisk" />
+							</svg>
+						{/if}
+					</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{foreach $option in $options ?: []}
+					<tr name="{$name}_{$option.cpInstanceId}">
+						<td>
+							{$option.label}
+						</td>
+						<td>
+							${$option.price}
+						</td>
+						<td>
+							{$option.quantity}
+						</td>
+						<td>
+							<input
+								class="field cpInstance-field form-control lfr-input-text"
+								cpDefinitionId="{$option.cpDefinitionId}"
+								data-row="{$option.cpInstanceId}"
+								data-row-index="{index($option)}"
+								{if $dir}dir="{$dir}"{/if}
+								{if $readOnly}disabled{/if}
+								id="cpInstance_{$option.cpInstanceId}"
+								min="0"
+								max="{$option.maxQuantity}"
+								name="cpInstance_{$option.cpInstanceId}"
+								type="number"
+								value="0"
+							/>
+						</td>
+					</tr>
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+{/template}

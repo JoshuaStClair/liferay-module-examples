@@ -1,0 +1,10 @@
+dependencies {
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.currency.api", version: "default"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "default"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "default"
+	compileOnly group: "javax.portlet", name: "portlet-api", version: "default"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "default"
+	compileOnly group: "jstl", name: "jstl", version: "default"
+	compileOnly group: "org.osgi", name: "osgi.cmpn", version: "default"
+	compileOnly project(":modules:product-details:commerce-cart:commerce-cart-api")
+}

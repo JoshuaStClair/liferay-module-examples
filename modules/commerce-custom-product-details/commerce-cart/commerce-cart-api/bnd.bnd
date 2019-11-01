@@ -1,0 +1,6 @@
+Bundle-Name: Custom Commerce Cart API
+Bundle-SymbolicName: com.liferay.custom.commerce.cart.api
+Bundle-Version: 1.0.0
+Export-Package:\
+  com.liferay.custom.commerce.cart.api.application,\
+  com.liferay.custom.commerce.cart.api.application.model

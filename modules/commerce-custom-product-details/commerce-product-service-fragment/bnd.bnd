@@ -1,0 +1,5 @@
+Bundle-Name: Custom Commerce Product Service Fragment
+Bundle-SymbolicName: com.liferay.custom.commerce.product.internal.util.fragment
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.commerce.product.internal.catalog
+Fragment-Host: com.liferay.commerce.product.service;bundle-version="[2.1.4, 2.1.50)"

@@ -1,0 +1,12 @@
+Bundle-Name: Custom Commerce Theme Minium Impl Resource Override
+Bundle-SymbolicName: com.liferay.custom.resource.override
+Bundle-Version: 1.0.0
+Provide-Capability:\
+	liferay.resource.bundle;\
+		resource.bundle.base.name="content.Language",\
+	liferay.resource.bundle;\
+		bundle.symbolic.name=com.liferay.commerce.theme.minium.impl;\
+		resource.bundle.aggregate:String="(bundle.symbolic.name=com.liferay.custom.resource.override),(bundle.symbolic.name=com.liferay.commerce.theme.minium.impl)";\
+		resource.bundle.base.name="content.Language";\
+		service.ranking:Long="2";\
+		servlet.context.name=commerce-theme-minium-impl

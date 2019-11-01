@@ -1,0 +1,4 @@
+Bundle-Name: Custom Commerce Product Definitions Web Fragment
+Bundle-SymbolicName: com.liferay.custom.commerce.product.definitions.web.fragment
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.commerce.product.definitions.web;bundle-version="[2.0.3, 2.0.50)"

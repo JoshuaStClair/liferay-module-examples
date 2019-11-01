@@ -1,0 +1,4 @@
+dependencies {
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.media.api", version: "default"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.service", version: "default"
+}
